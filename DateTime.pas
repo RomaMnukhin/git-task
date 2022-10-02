@@ -32,7 +32,11 @@
   var resDays := 0;
   for var i := firstYear to secondYear do
     if (i mod 4 = 0) and ((i mod 100 <> 0) or (i mod 400 = 0)) then
-      resDays += 366;
+      resDays += 366
     else resDays += 365;
+  
+  var hours := ReadInteger;
+  Print(hours * 3600);
+  
   
 end.
