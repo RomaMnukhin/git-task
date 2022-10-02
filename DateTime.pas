@@ -19,4 +19,20 @@
     Print(1)
   else
     Print(2);
+  
+  if (Year mod 4 = 0) and ((Year mod 100 <> 0) or (Year mod 400 = 0)) then
+    Print(366)
+  else Print(365);
+  
+  
+  var (firstYear, secondYear) := ReadInteger2;
+  Assert(firstYear > 0);
+  Assert(secondYear > 0);
+  Assert(firstYear <= secondYear);
+  var resDays := 0;
+  for var i := firstYear to secondYear do
+    if (i mod 4 = 0) and ((i mod 100 <> 0) or (i mod 400 = 0)) then
+      resDays += 366;
+    else resDays += 365;
+  
 end.
